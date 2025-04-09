@@ -5,7 +5,7 @@ export function Footer(){
     return(
         <div className="flex flex-col items-center gap-4">
             <div className="flex justify-center items-center gap-8">
-                <Link href={'www.linkedin.com/in/tamzeed-mahfuz-795518348'}>
+                <Link href={'https://www.linkedin.com/in/tamzeed-mahfuz-795518348/'}>
                     <Linkedin />
                 </Link>
                 <Link href={'https://github.com/sleepytmzd'}>
