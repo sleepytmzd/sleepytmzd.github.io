@@ -1,149 +1,246 @@
+'use client'
+
+import AnimatedContent from "@/components/AnimatedContent"
 import { Github, Tag, Globe, MonitorPlay } from "lucide-react"
 import Link from "next/link"
 
-export default function Page(){
+export default function Page() {
     return (
-        <div className="max-w-6xl mx-auto">
-            <div className="grid md:grid-cols-2 grid-cols-1 md:gap-20 md:px-20 px-10 gap-10 ">
-                <div className="dark:border dark:border-white rounded-xl shadow-md p-4 hover:scale-102 transition-transform">
-                    <div className="flex justify-between items-center">
-                        <div className="flex gap-2 items-center">
-                            <Globe/>
-                            <div className="text-2xl font-bold">
-                                Notes-app
+        <div className="max-w-6xl mx-auto py-10">
+            <div className="grid md:grid-cols-2 grid-cols-1 md:gap-8 gap-6 px-6">
+                <AnimatedContent
+                    distance={100}
+                    direction="vertical"
+                    reverse={false}
+                    duration={1.2}
+                    ease="power3.out"
+                    initialOpacity={0}
+                    animateOpacity
+                    scale={1}
+                    threshold={0.1}
+                    delay={0}
+                >
+                    <div className="card">
+                        <div className="title-row">
+                            <div className="flex gap-3 items-center">
+                                <span className="icon-wrapper"><Globe size={18} /></span>
+                                <div>
+                                    <div className="text-2xl font-bold">Foodhub</div>
+                                    <div className="muted">Full-stack microservices platform</div>
+                                </div>
                             </div>
-                        </div>
-                        
-                        <div className="flex gap-2">
-                            <div>
-                                <Link href="https://github.com/sleepytmzd/notes-app-frontend">
-                                    <Github/>
-                                </Link>
-                            </div>
-                            <div>
-                                <Link href="https://github.com/sleepytmzd/notes-app-backend">
-                                    <Github/>
-                                </Link>
-                            </div>
-                            <div>
-                                <Link href="https://notes-app-frontend-plax-9owb47yqr-sleepytmzds-projects.vercel.app">
-                                    <MonitorPlay/>
-                                </Link>
-                            </div>
-                        </div>
-                    </div>
 
-                    <div className="flex gap-4 items-center mt-3">
-                        <Tag/>
-                        <div className="border-2 border-secondary rounded-xl p-1">NextJS</div>
-                        <div className="border-2 border-secondary rounded-xl p-1">Django</div>
-                        <div className="border-2 border-secondary rounded-xl p-1">Postgres</div>
-                    </div>
-
-                    <div className="mt-8">
-                        Created and deployed a full-stack Note creator app. The app itself is simple, the purpose is to demonstrate the usage of 
-                        tech stack. Learnt the django and nextjs frameworks, and to deploy a complete website along with backend server and online database.
-                    </div>
-                </div>
-
-                
-                <div className="dark:border dark:border-white rounded-xl shadow-md p-4 hover:scale-102 transition-transform">
-                    <div className="flex justify-between items-center">
-                        <div className="flex gap-2 items-center">
-                            <Globe/>
-                            <div className="text-2xl font-bold">
-                                HelpUrSelf
-                            </div>
-                        </div>
-                        
-                        <div className="flex gap-2">
-                            <div>
-                                <Link href="https://github.com/2105007NN/hackCSB-project">
-                                    <Github/>
+                            <div className="link-btns">
+                                <Link href="https://github.com/sleepytmzd/foodhub-therap-javafest" className="link-btn" aria-label="Foodhub repository">
+                                    <Github size={16} /> Repo
+                                </Link>
+                                <Link href="https://youtu.be/NxZBAfyFvio" className="link-btn" aria-label="Foodhub demo">
+                                    <MonitorPlay size={16} /> Demo
                                 </Link>
                             </div>
                         </div>
-                    </div>
 
-                    <div className="flex gap-4 items-center mt-3">
-                        <Tag/>
-                        <div className="border-2 border-secondary rounded-xl p-1">React</div>
-                        <div className="border-2 border-secondary rounded-xl p-1">Express</div>
-                        <div className="border-2 border-secondary rounded-xl p-1">Sqlite</div>
-                        <div className="border-2 border-secondary rounded-xl p-1">Websocket</div>
-                    </div>
-
-                    <div className="mt-8">
-                        Worked on a full-stack mental health companion app. Learnt react and developed both frontend and backend.
-                        Used websocket to implement a real-time chat system.
-                    </div>
-                </div>
-
-
-                <div className="dark:border dark:border-white rounded-xl shadow-md p-4 hover:scale-102 transition-transform">
-                    <div className="flex justify-between items-center">
-                        <div className="flex gap-2 items-center">
-                            <Globe/>
-                            <div className="text-2xl font-bold">
-                                MockGit
-                            </div>
+                        <div className="badges mt-3">
+                            <Tag />
+                            <div className="badge">NextJS</div>
+                            <div className="badge">SpringBoot</div>
+                            <div className="badge">FastAPI</div>
+                            <div className="badge">Postgres</div>
+                            <div className="badge">MongoDB</div>
+                            <div className="badge">DevOps</div>
+                            <div className="badge">Keycloak</div>
+                            <div className="badge">Kubernetes</div>
                         </div>
-                        
-                        <div className="flex gap-2">
-                            <div>
-                                <Link href="https://github.com/MehemudAzad/devSprintMain">
-                                    <Github/>
+
+                        <div className="desc mt-4">
+                            Created and deployed a full-stack web platform for food lovers following a microservices architecture. Services are containerized with Docker and deployed to Google Kubernetes Engine. Implemented CI/CD with GitHub Actions and adopted DevOps best practices to ensure scalability and reliability.
+                        </div>
+                    </div>
+                </AnimatedContent>
+
+                <AnimatedContent
+                    distance={100}
+                    direction="vertical"
+                    reverse={false}
+                    duration={1.2}
+                    ease="power3.out"
+                    initialOpacity={0}
+                    animateOpacity
+                    scale={1}
+                    threshold={0.1}
+                    delay={0.2}
+                >
+                    <div className="card">
+                        <div className="title-row">
+                            <div className="flex gap-3 items-center">
+                                <span className="icon-wrapper"><Globe size={18} /></span>
+                                <div>
+                                    <div className="text-2xl font-bold">Notes-app</div>
+                                    <div className="muted">Note creator with frontend & backend</div>
+                                </div>
+                            </div>
+
+                            <div className="link-btns">
+                                <Link href="https://github.com/sleepytmzd/notes-app-frontend" className="link-btn" aria-label="Notes frontend">
+                                    <Github size={16} /> Frontend
+                                </Link>
+                                <Link href="https://github.com/sleepytmzd/notes-app-backend" className="link-btn" aria-label="Notes backend">
+                                    <Github size={16} /> Backend
+                                </Link>
+                                <Link href="https://notes-app-frontend-plax-9owb47yqr-sleepytmzds-projects.vercel.app" className="link-btn" aria-label="Notes live demo">
+                                    <MonitorPlay size={16} /> Live
                                 </Link>
                             </div>
                         </div>
-                    </div>
 
-                    <div className="flex gap-4 items-center mt-3">
-                        <Tag/>
-                        <div className="border-2 border-secondary rounded-xl p-1">React</div>
-                        <div className="border-2 border-secondary rounded-xl p-1">Express</div>
-                        <div className="border-2 border-secondary rounded-xl p-1">Postgres</div>
-                    </div>
-
-                    <div className="mt-8">
-                        Worked on a full stack open source collaboration app. Learnt expressJS and developed the backend. 
-                        <br/><span className="font-bold">Competition: </span>IEEE Devsprint 2024
-                        <br/><span className="font-bold">BUET Rising Team Award</span>
-                    </div>
-                </div>
-
-
-                <div className="dark:border dark:border-white rounded-xl shadow-md p-4 hover:scale-102 transition-transform">
-                    <div className="flex justify-between items-center">
-                        <div className="flex gap-2 items-center">
-                            <Globe/>
-                            <div className="text-2xl font-bold">
-                                Anibugs
-                            </div>
+                        <div className="badges mt-3">
+                            <Tag />
+                            <div className="badge">NextJS</div>
+                            <div className="badge">Django</div>
+                            <div className="badge">Postgres</div>
                         </div>
-                        
-                        <div className="flex gap-2">
-                            <div>
-                                <Link href="https://github.com/arnobIsWorst/AniBugs-Revamp">
-                                    <Github/>
+
+                        <div className="desc mt-4">
+                            A full-stack note creator app built to demonstrate end-to-end deployment. Implemented frontend in Next.js, backend in Django, and connected to a hosted Postgres database.
+                        </div>
+                    </div>
+                </AnimatedContent>
+
+
+                <AnimatedContent
+                    distance={100}
+                    direction="vertical"
+                    reverse={false}
+                    duration={1.2}
+                    ease="power3.out"
+                    initialOpacity={0}
+                    animateOpacity
+                    scale={1}
+                    threshold={0.1}
+                    delay={0.4}
+                >
+                    <div className="card">
+                        <div className="title-row">
+                            <div className="flex gap-3 items-center">
+                                <span className="icon-wrapper"><Globe size={18} /></span>
+                                <div>
+                                    <div className="text-2xl font-bold">HelpUrSelf</div>
+                                    <div className="muted">Mental health companion with real-time chat</div>
+                                </div>
+                            </div>
+
+                            <div className="link-btns">
+                                <Link href="https://github.com/2105007NN/hackCSB-project" className="link-btn" aria-label="HelpUrSelf repo">
+                                    <Github size={16} /> Repo
                                 </Link>
                             </div>
                         </div>
+
+                        <div className="badges mt-3">
+                            <Tag />
+                            <div className="badge">React</div>
+                            <div className="badge">Express</div>
+                            <div className="badge">Sqlite</div>
+                            <div className="badge">Websocket</div>
+                        </div>
+
+                        <div className="desc mt-4">
+                            Built a companion app focusing on mental health. Implemented a websocket-powered real-time chat and developed both frontend and backend.
+                        </div>
                     </div>
 
-                    <div className="flex gap-4 items-center mt-3">
-                        <Tag/>
-                        <div className="border-2 border-secondary rounded-xl p-1">EJS</div>
-                        <div className="border-2 border-secondary rounded-xl p-1">Express</div>
-                        <div className="border-2 border-secondary rounded-xl p-1">Postgres</div>
-                        <div className="border-2 border-secondary rounded-xl p-1">Database Design</div>
+                </AnimatedContent>
+
+
+                <AnimatedContent
+                    distance={100}
+                    direction="vertical"
+                    reverse={false}
+                    duration={1.2}
+                    ease="power3.out"
+                    initialOpacity={0}
+                    animateOpacity
+                    scale={1}
+                    threshold={0.1}
+                    delay={0.6}
+                >
+                    <div className="card">
+                        <div className="title-row">
+                            <div className="flex gap-3 items-center">
+                                <span className="icon-wrapper"><Globe size={18} /></span>
+                                <div>
+                                    <div className="text-2xl font-bold">MockGit</div>
+                                    <div className="muted">Open-source collaboration app</div>
+                                </div>
+                            </div>
+
+                            <div className="link-btns">
+                                <Link href="https://github.com/MehemudAzad/devSprintMain" className="link-btn" aria-label="MockGit repo">
+                                    <Github size={16} /> Repo
+                                </Link>
+                            </div>
+                        </div>
+
+                        <div className="badges mt-3">
+                            <Tag />
+                            <div className="badge">React</div>
+                            <div className="badge">Express</div>
+                            <div className="badge">Postgres</div>
+                        </div>
+
+                        <div className="desc mt-4">
+                            Contributed to a collaboration platform. Implemented backend features with Express.js. Competition: IEEE Devsprint 2024 — BUET Rising Team Award.
+                        </div>
                     </div>
 
-                    <div className="mt-8">
-                        My L-2 T-1 Database Design term project, an Anime database and marketplace. Learnt to design and manage SQL database for large projects.
-                        Used EJS to develop the demo web-app displaying database management.
+
+                </AnimatedContent>
+
+
+                <AnimatedContent
+                    distance={100}
+                    direction="vertical"
+                    reverse={false}
+                    duration={1.2}
+                    ease="power3.out"
+                    initialOpacity={0}
+                    animateOpacity
+                    scale={1}
+                    threshold={0.1}
+                    delay={0.7}
+                >
+
+                    <div className="card">
+                        <div className="title-row">
+                            <div className="flex gap-3 items-center">
+                                <span className="icon-wrapper"><Globe size={18} /></span>
+                                <div>
+                                    <div className="text-2xl font-bold">Anibugs</div>
+                                    <div className="muted">Anime DB & marketplace (DB design)</div>
+                                </div>
+                            </div>
+
+                            <div className="link-btns">
+                                <Link href="https://github.com/arnobIsWorst/AniBugs-Revamp" className="link-btn" aria-label="Anibugs repo">
+                                    <Github size={16} /> Repo
+                                </Link>
+                            </div>
+                        </div>
+
+                        <div className="badges mt-3">
+                            <Tag />
+                            <div className="badge">EJS</div>
+                            <div className="badge">Express</div>
+                            <div className="badge">Postgres</div>
+                            <div className="badge">Database Design</div>
+                        </div>
+
+                        <div className="desc mt-4">
+                            Term project focused on SQL database design and a demo EJS app for managing and showcasing an anime database and marketplace.
+                        </div>
                     </div>
-                </div>
+                </AnimatedContent>
+
             </div>
         </div>
     )

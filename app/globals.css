@@ -36,3 +36,215 @@ body {
   /* @apply bg-[var(--background)] text-[var(--foreground)]; */
   font-family: Arial, Helvetica, sans-serif;
 }
+
+/* New UI utility styles for project cards */
+.card {
+  background: linear-gradient(180deg, color-mix(in srgb, var(--primary) 88%, transparent), transparent);
+  background-color: var(--primary);
+  color: var(--foreground);
+  border-radius: 1rem;
+  padding: 1.25rem;
+  border: 1px solid rgba(0,0,0,0.06);
+  box-shadow: 0 6px 18px rgba(15,15,15,0.06);
+  transition: transform 220ms ease, box-shadow 220ms ease, background-color 220ms ease;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+.dark .card {
+  background: linear-gradient(180deg, color-mix(in srgb, var(--primary) 70%, transparent), rgba(255,255,255,0.02));
+  background-color: var(--primary);
+  border: 1px solid rgba(255,255,255,0.06);
+  box-shadow: 0 8px 26px rgba(0,0,0,0.45);
+}
+
+.card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 14px 40px rgba(0,0,0,0.12);
+}
+
+/* Title & icon */
+.card .title-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 1rem;
+}
+.icon-wrapper {
+  width: 42px;
+  height: 42px;
+  border-radius: 999px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  background: linear-gradient(135deg, rgba(255,255,255,0.08), rgba(0,0,0,0.03));
+  border: 1px solid rgba(0,0,0,0.05);
+}
+.dark .icon-wrapper {
+  background: linear-gradient(135deg, rgba(255,255,255,0.03), rgba(0,0,0,0.12));
+  border: 1px solid rgba(255,255,255,0.06);
+}
+
+/* Badges */
+.badges {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  align-items: center;
+}
+.badge {
+  padding: 0.25rem 0.6rem;
+  border-radius: 999px;
+  border: 1px solid var(--secondary);
+  color: var(--foreground);
+  font-size: 0.8rem;
+  background: transparent;
+}
+
+/* Link buttons (repo / live) */
+.link-btns {
+  display: flex;
+  gap: 0.5rem;
+  align-items: center;
+}
+.link-btn {
+  display: inline-flex;
+  gap: 0.4rem;
+  align-items: center;
+  padding: 0.42rem 0.65rem;
+  border-radius: 0.6rem;
+  font-weight: 600;
+  font-size: 0.85rem;
+  text-decoration: none;
+  color: var(--foreground);
+  border: 1px solid transparent;
+  background: rgba(0,0,0,0.04);
+  transition: background 160ms ease, transform 160ms ease;
+}
+.dark .link-btn {
+  background: rgba(255,255,255,0.02);
+}
+.link-btn:hover {
+  transform: translateY(-2px);
+  background: rgba(0,0,0,0.07);
+}
+.dark .link-btn:hover {
+  background: rgba(255,255,255,0.03);
+}
+
+/* description */
+.card .desc {
+  color: color-mix(in srgb, var(--foreground) 88%, transparent);
+  line-height: 1.5;
+  font-size: 0.95rem;
+}
+
+/* utility for small muted text */
+.muted {
+  color: color-mix(in srgb, var(--foreground) 60%, transparent);
+  font-size: 0.9rem;
+}
+
+/* =========================
+   Skills page specific UI
+   ========================= */
+
+.skill-container {
+  padding: 2rem 1rem;
+  display: grid;
+  gap: 1rem;
+}
+
+/* New: non-card skill section (separate sections, not cards) */
+.skill-section {
+  padding: 1rem 1.1rem;
+  border-radius: 0.9rem;
+  background: linear-gradient(180deg, color-mix(in srgb, var(--foreground) 3%, transparent), transparent);
+  border: 1px solid color-mix(in srgb, var(--foreground) 5%, transparent);
+  transition: background 180ms ease, transform 160ms ease;
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+.dark .skill-section {
+  background: linear-gradient(180deg, color-mix(in srgb, var(--foreground) 2%, transparent), rgba(255,255,255,0.01));
+  border: 1px solid rgba(255,255,255,0.04);
+}
+.skill-section:hover {
+  transform: translateY(-4px);
+  background: linear-gradient(180deg, color-mix(in srgb, var(--foreground) 6%, transparent), transparent);
+}
+
+/* section header */
+.section-header {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+}
+.section-header .title {
+  font-size: 1.125rem;
+  font-weight: 700;
+}
+.section-hr {
+  border: none;
+  height: 1px;
+  background: linear-gradient(90deg, transparent, color-mix(in srgb, var(--foreground) 8%, transparent), transparent);
+  margin: .6rem 0 1rem 0;
+}
+
+/* tag grid */
+.skill-tags {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(120px, 1fr));
+  gap: 0.6rem;
+  align-items: start;
+}
+
+/* individual tag */
+.skill-tag {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0.5rem 0.75rem;
+  border-radius: 0.75rem;
+  border: 1px solid color-mix(in srgb, var(--foreground) 8%, transparent);
+  background: color-mix(in srgb, var(--foreground) 3%, transparent);
+  color: var(--foreground);
+  font-weight: 600;
+  font-size: 0.95rem;
+  transition: transform 140ms ease, background 140ms ease, box-shadow 140ms ease;
+  cursor: default;
+}
+.dark .skill-tag {
+  border-color: color-mix(in srgb, var(--foreground) 10%, transparent);
+  background: color-mix(in srgb, var(--foreground) 2%, transparent);
+}
+.skill-tag:hover {
+  transform: translateY(-4px);
+  background: color-mix(in srgb, var(--primary) 14%, transparent);
+  box-shadow: 0 8px 18px rgba(0,0,0,0.06);
+}
+
+/* header icon accent */
+.icon-accent {
+  width: 44px;
+  height: 44px;
+  border-radius: 10px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  background: linear-gradient(135deg, color-mix(in srgb, var(--foreground) 6%, transparent), color-mix(in srgb, var(--primary) 8%, transparent));
+  border: 1px solid color-mix(in srgb, var(--foreground) 8%, transparent);
+}
+.dark .icon-accent {
+  background: linear-gradient(135deg, rgba(255,255,255,0.02), rgba(255,255,255,0.01));
+  border: 1px solid rgba(255,255,255,0.04);
+}
+
+/* responsive tweaks */
+@media (min-width: 768px) {
+  .skill-container {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}

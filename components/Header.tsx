@@ -18,8 +18,8 @@ export function Header() {
     ];
 
     return (
-        <header className="bg-background shadow-lg border border-white">
-            <div className="flex justify-between p-2 pl-10 pr-10 items-center text-lg relative">
+        <header className="bg-background shadow-lg backdrop-blur-md bg-opacity-80 fixed top-0 left-0 right-0 z-50">
+            <div className="flex justify-between p-2 pl-10 pr-10 items-center text-lg relative  max-w-7xl mx-auto rounded-b-lg">
                 {/* Logo */}
                 <div className="border-2 rounded-lg border-foreground p-4 hover:bg-primary transition-colors">
                     <Link href="/">

@@ -42,7 +42,7 @@ export default function RootLayout({
             <div className="fixed top-0 left-0 right-0 z-10">
               <Header />
             </div>
-            <div className="min-h-screen pt-32">
+            <div className="min-h-screen pt-24">
               {children}
             </div>
             <div className="p-8">
