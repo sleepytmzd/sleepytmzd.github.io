@@ -101,10 +101,56 @@ export default function Page() {
                         </div>
 
                         <div className="desc mt-4">
-                            A full-stack note creator app built to demonstrate end-to-end deployment. Implemented frontend in Next.js, backend in Django, and connected to a hosted Postgres database.
+                            A full-stack note creator app built to demonstrate end-to-end deployment. Implemented frontend in Next.js, backend in Django.
+                            Deployed on Vercel and Render. Supabase for authentication and database.
                         </div>
                     </div>
                 </AnimatedContent>
+
+                <AnimatedContent
+                    distance={100}
+                    direction="vertical"
+                    reverse={false}
+                    duration={1.2}
+                    ease="power3.out"
+                    initialOpacity={0}
+                    animateOpacity
+                    scale={1}
+                    threshold={0.1}
+                    delay={0.4}
+                >
+                    <div className="card">
+                        <div className="title-row">
+                            <div className="flex gap-3 items-center">
+                                <span className="icon-wrapper"><Globe size={18} /></span>
+                                <div>
+                                    <div className="text-2xl font-bold">Chain Reaction</div>
+                                    <div className="muted">2 player game with AI agent</div>
+                                </div>
+                            </div>
+
+                            <div className="link-btns">
+                                <Link href="https://github.com/sleepytmzd/Chain-reaction-backend" className="link-btn" aria-label="Chain Reaction repo">
+                                    <Github size={16} /> Repo
+                                </Link>
+                            </div>
+                        </div>
+
+                        <div className="badges mt-3">
+                            <Tag />
+                            <div className="badge">Unity</div>
+                            <div className="badge">Spring Boot</div>
+                            <div className="badge">Adversarial AI</div>
+                        </div>
+
+                        <div className="desc mt-4">
+                            Developed a 2-player Chain Reaction game with an AI opponent using Minimax algorithm with Alpha-Beta pruning. Created the game in Unity and built a Spring Boot backend to manage game state and player interactions.
+                            Deployed on UnityHub and Render.
+                        </div>
+                    </div>
+
+                </AnimatedContent>
+
 
 
                 <AnimatedContent
@@ -145,7 +191,7 @@ export default function Page() {
                         </div>
 
                         <div className="desc mt-4">
-                            Built a companion app focusing on mental health. Implemented a websocket-powered real-time chat and developed both frontend and backend.
+                            Built a companion app focusing on mental health. Implemented a websocket-powered real-time chat. Developed frontend using React and backend with Express.
                         </div>
                     </div>
 
